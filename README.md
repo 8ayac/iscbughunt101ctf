@@ -6,7 +6,7 @@
 
 ## 問題リスト
 
-- [SQli101](./sqli101)
+- [SQLi101](./sqli101)
 - [SSRF101](./ssrf101)
 - [BuggyBase2](./buggybase2)
 
