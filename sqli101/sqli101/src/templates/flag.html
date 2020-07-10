@@ -1,0 +1,49 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Congratulations! - SQLi101{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Quantico', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400%;
+            animation: bg-animation 5s ease infinite;
+            color: white;
+        }
+
+        @keyframes bg-animation {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Congratulations!</h1>
+                <p style="font-size: 1.25rem;">The flag is <em>{{ flag }}</em></p>
+                <a href="/logout" class="btn btn-danger mt-1">Logout</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

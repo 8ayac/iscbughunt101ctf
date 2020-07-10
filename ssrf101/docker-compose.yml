@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  ssrf101:
+    build: ./ssrf101
+    restart: always
+    networks:
+      default:
+      internal:
+
+  shemhazai:
+    image: httpd:2.4.43
+    restart: always
+    volumes:
+      - ./shemhazai:/usr/local/apache2/htdocs/
+    networks:
+      internal:
+
+  nginx:
+    image: nginx:1.18
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 127.0.0.1:10080:80
+    depends_on:
+      - ssrf101
+
+networks:
+  default:
+  internal:
+    internal: true

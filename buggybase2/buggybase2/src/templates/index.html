@@ -1,0 +1,44 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Buggy Base 2{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Share+Tech+Mono&display=swap"
+          rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Share Tech Mono', monospace;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <nav class="navbar navbar-dark bg-danger">
+        <a href="/" class="mx-auto navbar-brand">Buggy Base 2</a>
+    </nav>
+    <div class="container mx-auto">
+        <img src="{{ url_for('static', filename='bee64.png') }}" width="50%"
+             class="mx-auto d-block img-fluid align-content-center" alt="bee">
+        <form action="/" method="GET">
+            <div>
+                <input type="text" class="form-control form-control-lg mt-2 mb-2" placeholder="Input text" name="s">
+            </div>
+            <div class="btn-group btn-group-lg d-flex mt-2 mb-2" role="group">
+                <button type="submit" class="btn btn-danger w-100" name="mode" value="encode">
+                    Encode
+                </button>
+                <button type="submit" class="btn btn-outline-secondary w-100" name="mode" value="decode">
+                    Decode
+                </button>
+            </div>
+        </form>
+        {% if result %}
+            <div class="p-1 bg-dark text-light text-center" style="overflow-wrap: break-word;">
+                Result
+                <p class="h3">{{ result }}</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/styles/vs.min.css">
+    <style>
+        * {
+            vertical-align: middle;
+        }
+    </style>
+    <title>SSRF101</title>
+</head>
+<body>
+<h1>🐌SSRF101</h1>
+
+<div>
+    <form action="/" method="POST">
+        <label for="inputURL">URL</label>
+        <input type="text" name="url" id="inputURL" placeholder="input URL">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+{% if result %}
+    <pre><code class="html">{{ result }}</code></pre>
+{% endif %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"
+        integrity="sha512-lnOllyZZlRk/gQIyjS3+h+LUy54uyM4aGq2zbGc82KTvBlp/fodSpdh/pywPztpU9zUqHcJr+jP+a1zLa9oCJw=="
+        crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}{{ code }} Error - SQLi101{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Quantico', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            background-color: #c50e29;
+            color: white;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="container h-100">
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>🐞{{ code }} Error</h1>
+                <p style="font-size: 1.25rem;">{{ msg }}</p>
+                <a href="/" class="btn btn-warning mt-1">Back</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
