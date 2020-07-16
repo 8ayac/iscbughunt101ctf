@@ -10,4 +10,32 @@
 - [SSRF101](./ssrf101)
 - [BuggyBase2](./buggybase2)
 
+## 各問題のデプロイ方法
+
+### SQLi101
+
+下記コマンドを実行したあと、<http://127.0.0.1:10070/>で問題にアクセスできる。
+
+```shell-session
+$ cd sqli101
+$ docker-compose up -d
+```
+
+### SSRF101
+
+下記コマンドを実行したあと、<http://127.0.0.1:10080/>で問題にアクセスできる。
+
+```shell-session
+$ cd ssrf101
+$ docker-compose up -d
+```
+
+### BuggyBase2
+
+下記コマンドを実行したあと、<http://127.0.0.1:10090/>で問題にアクセスできる。
+
+```shell-session
+$ cd buggybase2
+$ docker-compose up -d
+```
 
