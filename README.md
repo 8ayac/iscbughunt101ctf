@@ -10,6 +10,10 @@
 - [SSRF101](./ssrf101)
 - [BuggyBase2](./buggybase2)
 
+## Writeups
+
+<http://caya8.hatenablog.com/entry/2020/07/16/083000>
+
 ## 各問題のデプロイ方法
 
 ### SQLi101
