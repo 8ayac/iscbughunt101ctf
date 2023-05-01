@@ -1,4 +1,4 @@
 Flask-Bootstrap4==4.0.2
-Flask==1.1.2
+Flask==2.3.2
 mysqlclient==2.0.1
 uWSGI==2.0.19.1
